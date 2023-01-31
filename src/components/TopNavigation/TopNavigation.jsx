@@ -1,6 +1,6 @@
 import React from 'react';
 import {Navbar,Container,Nav,NavDropdown} from 'react-bootstrap'
-
+import {Link,NavLink } from 'react-router-dom'
 //* Images
 import BlackLogo from '../../assets/Images/logo_black.png'
 import WhiteLogo from '../../assets/Images/logo_white.png'
@@ -11,36 +11,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function TopNavigation(){
     const [navScroll,setNavScroll] = React.useState({
-        navBarTitle:'navTitle',
-        navBarLogo:WhiteLogo,
+        navBarTitle:'navTitleScroll',
+        navBarLogo:BlackLogo,
         navBarClass:{
             navClass:'navbar',
-            variant:'dark'
-        }
+            variant:'white',
+            linkColor:'#FFF'
+        },
     }); 
 
     
     function onScroll(){
         if(window.scrollY > 100){
             setNavScroll(prevData => ({
-                ...prevData,
-                navBarTitle:'navTitleScroll',
-                navBarLogo:BlackLogo,
+                ...prevData, 
                 navBarClass:{
                     navClass:'navbarScroll',
-                    variant:'white',
-                    linkColor:'#FFF'
                 }
             }))
         }else if(window.scrollY < 100){
             setNavScroll(prevData => ({
-                ...prevData,
-                navBarTitle:'navTitle',
-                navBarLogo:WhiteLogo,
+                ...prevData, 
                 navBarClass:{
                     navClass:'navbar',
-                    variant:'dark',
-                    linkColor:'#000000'
                 }
             }))
         }
@@ -57,19 +50,19 @@ export default function TopNavigation(){
         <React.Fragment>
              <Navbar collapseOnSelect fixed='top' expand="lg"  className={navScroll.navBarClass.navClass}   variant={navScroll.navBarClass.variant}>
                 
-                    <Navbar.Brand href="#home" className={navScroll.navBarTitle} ><img src={navScroll.navBarLogo} alt="" /></Navbar.Brand>
+                    <NavLink to="/" className={navScroll.navBarTitle} ><img src={navScroll.navBarLogo} className='navigationLogo' alt="" /></NavLink>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                      
                     </Nav>
                     <Nav >
-                        <Nav.Link href="#deets"  style={{fontSize:'17px'}}>Home</Nav.Link>
-                        <Nav.Link href="#deets"  style={{fontSize:'17px'}}>About</Nav.Link>
-                        <Nav.Link href="#deets"  style={{fontSize:'17px'}}>Service</Nav.Link>
-                        <Nav.Link href="#deets"  style={{fontSize:'17px'}}>Courses</Nav.Link>
-                        <Nav.Link href="#deets"  style={{fontSize:'17px'}}>Porfolio</Nav.Link>
-                        <Nav.Link href="#deets"  style={{fontSize:'17px'}}>Contact Us</Nav.Link>
+                        <NavLink  to="/"  style={{fontSize:'17px'}}  activestyle={{Color:'Yellow'}} className='nav-link' end>Home</NavLink>
+                        <NavLink to="/AboutUs"  style={{fontSize:'17px'}} className='nav-link'>About</NavLink>
+                        <NavLink to="/Services"  style={{fontSize:'17px'}} className='nav-link'>Service</NavLink>
+                        <NavLink to="/Courses"  style={{fontSize:'17px'}} className='nav-link'>Courses</NavLink>
+                        <NavLink to="/Portfolio"  style={{fontSize:'17px'}} className='nav-link'>Porfolio</NavLink>
+                        <NavLink to="/ContactUs"  style={{fontSize:'17px'}} className='nav-link'>Contact Us</NavLink>
 
                     </Nav>
                     </Navbar.Collapse>

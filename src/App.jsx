@@ -1,31 +1,30 @@
-import TopBanner from "./components/TopBanner/TopBanner";
-import Services from './components/Services/services'
+//* React Imports
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Footer from './components/Footer/Footer';
 import TopNavigation from './components/TopNavigation/TopNavigation';
-import Analysis from "./components/Anaylsis/Anaylsis";
-import Summary from './components/Summary/Summary'
-import RecentProject from "./components/RecentProject/RecentProject";
-import Courses from "./components/Courses/Courses";
-import Video from './components/Video/Video'
-import ClientReview from "./components/ClientReview/ClientReview";
-import AboutMe from './components/AboutMe/AboutMe'
-import Footer from "./components/Footer/Footer";
+import AppRouter from './Router/AppRouter';
+
+//* Page Imports
+// import TopNavigation from "./components/TopNavigation/TopNavigation";
+// import Home from "./pages/HomePage";
+// import AboutPage from './pages/AboutPage';
+// import CoursesPage from "./pages/CoursesPage";
+// import PortfolioPage from "./pages/PortfolioPage";
+// import ContactUsPage  from "./pages/ContactUsPage";
+// import ServicesPage from "./pages/ServicesPage";
+// import Footer from "./components/Footer/Footer";
 
 export default function App(){
 
 
     return(
-        <div>
-            <TopNavigation/>
-            <TopBanner/>
-            <Services/>
-            <Analysis/>
-            <Summary />
-            <RecentProject/>
-            <Courses/>
-            <Video/>
-            <ClientReview/>
-            <AboutMe />
-            <Footer/>
-        </div>
+     
+            <BrowserRouter>
+                <TopNavigation/>
+                    <AppRouter/>
+                <Footer/>
+            </BrowserRouter>
+     
     )
 }

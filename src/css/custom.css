@@ -90,30 +90,21 @@
     line-height: 23px;
     width: 85px;
     margin: -1.9rem auto 0;
+    
     margin-bottom: 3rem ;
 }
 .navbar{
-    background-color: transparent ;
+    background-color: #FFF ;
+    box-shadow: 0px 17px 15px -3px rgba(0,0,0,0.1);
     padding: 10px 30px !important;
     transition: 0.3s ease;
 }
 .navbarScroll{
     background-color: #FFF ;
     box-shadow: 0px 17px 15px -3px rgba(0,0,0,0.1);
-    
+    padding: 13px 30px !important;
 }
-.navTitle{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #FFF !important;
-    font-size: 30px;
-}
-.navTitleScroll{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #051b35 !important;
-    font-size: 30px;
-}
+
 
 .summaryFixedBanner{
     background-image: url(../assets/Images/summary.jpg);
@@ -179,6 +170,7 @@
     background-color: #051b35;
     margin:20px auto;
     border-radius: 5px;
+    cursor: pointer;
 }
 .sliderBack{
     background-color: #051b35;
@@ -298,4 +290,215 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+
+@media (max-width:373px){
+    .countTitle{
+        font-size: 30px;
+    }
+    .card{
+        width: 250px !important;
+    }
+    .navigationLogo{
+        width: 142px;
+    }
+}
+
+
+/** About Us */
+
+
+.topPageBanner{
+    background-image: url(../assets/Images/page.png);
+    min-height: 350px;
+    background-attachment: fixed;
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topPageOverlay{
+    position: absolute;
+    min-height: 350px;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.7);
+}
+.PageContent{
+    margin-top: 10em;
+    text-align: center;
+    color: #FFF;
+}
+.topPagetitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+/** Contact Us */
+
+.contactUs{
+    margin-top: 150px;
+}
+.contactTextarea{
+    height: 200px;
+    max-height: 200px;
+    min-height: 100px !important;
+}
+
+
+/** Welcome Design */
+
+.intro-area--top{
+    margin-top: -40px;
+    position: relative;
+    z-index: 2;
+}
+.section-title{
+    margin-bottom: 45px;
+    position: relative;
+}
+.intro-area--inner{
+    box-shadow: 0 0 30px rgb(0 0 0 / 7%);
+    background-color: #FFF;
+    padding: 50px  0 ;
+    border-radius: 8px;
+    border-radius: 10px;
+   
+}
+.intro-area--inner .sub-title{
+    font-weight: 400;
+    font-size: 25px;
+    font-family:'Raleway',sans-serif;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+}
+.intro-area--inner .main-Title{
+    font-family: 'Monserrat',sans-serif;
+    font-weight: 800;
+    color: #051b35;
+    font-size: 40px;
+}
+.Welcome__backgroundImage{
+    margin-top: 50px;
+}
+.Welcome__backgroundImage img{
+    width: 200px;
+}
+
+
+.Project__Details{
+    margin-top: 50px;
+}
+
+.project__imageContainer {
+    width: 100%;
+    position: relative;
+}
+
+.project__imageContainer:after{
+    content:'';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    height: 80%;
+    width: 154px;
+    border-radius: 10px;
+    background:#051b35;
+    z-index: -1;
+    transform: translateY(-50%);
+
+}
+.project__imageContainer img{
+    width: 100%;
+}
+
+.Project__Description{
+    text-align: left;
+}
+
+.Project__Features ul li , .Description__Full ul li{
+	padding: 20px 0 20px 34px;
+	list-style: none;
+	background-image: url("../assets/svg/confirm.svg");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 25px;
+    width: 150px;
+}
+.Course__Main_title{
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.Course__Main_title:hover{
+    color: #FDC800;
+}
+.Course__ImageContainer{
+    width: 100%;
+}
+.Course__ImageContainer img{
+    width: 100%;
+}
+.Course__Description{
+    max-width: 1000px !important ;
+}
+.Course__Sidebar{
+    border: 1px solid #CBD6E2;
+    height: 100%;
+}
+.Course__Sidebar .Course_Features_Title{
+    padding: 17px 20px;
+    border-bottom: 1px solid #C7D2E2;
+}
+.Course__Information_List li{
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.Course__Information_List li span, .Course__Price{
+    font-weight: 800;
+    font-family: 'Raleway',sans-serif;
+    margin-left:7px;
+}
+
+
+.Course__Sidebar_Bottom{
+    margin-top: 40px;
+    background-color: #F0F4F9;
+    padding: 30px 0;
+}
+.Course__Sidebar_Bottom button{
+    margin-top: 10px;
+    background-color: #FDC800;
+    border: none;
+    outline: none;
+    color: #000;
+    width: 80%;
+    height: 50px;
+    border-radius: 30px;
+    font-family: 'Monserrat',sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+.Course__Filter_Container{
+    width: 100%;
+    justify-content: space-around;
+    border: 1px solid black;
+    padding: 10px 0;
+}
+.Course__Description__Bottom .active{
+    background-color: #FDC800;
+    transition: 0.3s ease;
+}
+.question{
+    margin: 20px 0;
+}
+
+.single_review{
+    width: 100%;
+}
+.single_review span{
+    width: 40px;
 }

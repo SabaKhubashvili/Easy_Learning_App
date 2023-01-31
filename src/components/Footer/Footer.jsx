@@ -3,6 +3,7 @@ import { Container, Row,Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook,faYoutube,faTwitter } from '@fortawesome/free-brands-svg-icons'
 import {faEnvelope,faPhone,faAddressCard} from '@fortawesome/free-solid-svg-icons'
+import {Link} from 'react-router-dom'
 
 
 export default function Footer(){
@@ -36,9 +37,9 @@ export default function Footer(){
                     <Col lg={3} md={6} sm={12} className='p-4 text-center'  >
                     <h2 className="footerName">Policy</h2>
 
-                    <a href="#" className="footerLinks">Refund Policy</a> <br />
-                    <a href="#" className="footerLinks">Terms And Conditions</a> <br />
-                    <a href="#" className="footerLinks">Previcy Policy</a> <br />
+                    <Link to="RefundPolicy" className="footerLinks">Refund Policy</Link> <br />
+                    <Link to="/TermsConditions" className="footerLinks">Terms And Conditions</Link> <br />
+                    <Link to="/privacyPolicy" className="footerLinks">Previcy Policy</Link> <br />
                     </Col>
                 </Row>
                 <div className="copyrightSection ">

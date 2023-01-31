@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row,Col,Card,Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Image1 from '../../assets/Images/page1.png'
 import Image2 from '../../assets/Images/page2.png'
 import Image3 from '../../assets/Images/page3.png'
@@ -25,7 +26,7 @@ export default function RecentProject(){
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                                 </Card.Text>
-                                <Button variant="primary" className="mt-3">Visit Website</Button>
+                                <Link to='/Project'> <Button variant="primary" className="mt-3"> Visit Website</Button></Link> 
                             </Card.Body>
                         </Card>
                     </Col>
@@ -38,7 +39,7 @@ export default function RecentProject(){
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                                 </Card.Text>
-                                <Button variant="primary"  className="mt-3">Visit Website</Button>
+                                <Link to='/Project'> <Button variant="primary" className="mt-3"> Visit Website</Button></Link> 
                             </Card.Body>
                         </Card>
                     </Col>
@@ -51,7 +52,7 @@ export default function RecentProject(){
                                 Some quick example text to build on the card title and make up the
                                 bulk of the card's content.
                                 </Card.Text>
-                                <Button variant="primary"  className="mt-3">Visit Website</Button>
+                                <Link to='/Project'> <Button variant="primary" className="mt-3"> Visit Website</Button></Link> 
                             </Card.Body>
                         </Card>
                     </Col>

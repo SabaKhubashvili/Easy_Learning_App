@@ -1,4 +1,5 @@
 {
+  "homepage": "http://SabaKhubashvili.github.io/Easy_Learning_App",
   "name": "easy-learning-react",
   "private": true,
   "version": "0.0.0",
@@ -6,6 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -20,6 +23,7 @@
     "react-dom": "^18.2.0",
     "react-ityped": "^1.0.2",
     "react-player": "^2.11.0",
+    "react-router-dom": "^6.8.0",
     "react-slick": "^0.29.0",
     "recharts": "^2.3.2",
     "slick-carousel": "^1.8.1",
@@ -29,6 +33,7 @@
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
+    "gh-pages": "^5.0.0",
     "tailwindcss": "^3.2.4",
     "vite": "^4.0.0"
   }
